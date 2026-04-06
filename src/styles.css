@@ -1,0 +1,243 @@
+:root {
+  --font-body: "Montserrat", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-bg-top: #060e1a;
+  --color-bg-bottom: #020509;
+  --color-surface: #0b1525;
+  --color-surface-strong: #0e1a2e;
+  --color-text: #eef4ff;
+  --color-text-soft: rgba(238, 244, 255, 0.82);
+  --color-text-muted: rgba(219, 229, 245, 0.58);
+  --color-brand-strong: #5ae3cf;
+  --color-brand-accent: #7ab6ff;
+  --color-brand-calm: rgba(90, 227, 207, 0.12);
+
+  --glass-bg: rgba(12, 20, 35, 0.52);
+  --glass-bg-strong: rgba(10, 18, 32, 0.78);
+  --glass-border: rgba(176, 211, 255, 0.12);
+  --glass-border-subtle: rgba(176, 211, 255, 0.06);
+  --glass-border-hover: rgba(176, 211, 255, 0.22);
+
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.36);
+  --shadow-xl: 0 40px 100px rgba(0, 0, 0, 0.44);
+  --shadow-glow-brand: 0 8px 40px rgba(90, 227, 207, 0.12);
+  --shadow-glow-accent: 0 8px 40px rgba(122, 182, 255, 0.10);
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --section-gap: 7rem;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Cursor glow vars — set by useCursorGlow.js */
+  --cursor-x: -9999px;
+  --cursor-y: -9999px;
+
+  color: var(--color-text);
+  font-family: var(--font-body);
+  background: linear-gradient(180deg, var(--color-bg-top) 0%, var(--color-bg-bottom) 100%);
+  font-synthesis: none;
+  font-weight: 500;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: transparent;
+}
+
+/* ── Subtle dot grid ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, black 20%, transparent 80%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(90, 227, 207, 0.2);
+}
+
+/* ── Reveal animations ── */
+.reveal-block {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  transition:
+    opacity 800ms var(--ease-out-expo),
+    transform 800ms var(--ease-out-expo);
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal-block.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ── Staggered child reveals inside sections ── */
+.reveal-block .reveal-child {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 650ms var(--ease-out-expo),
+    transform 650ms var(--ease-out-expo);
+  transition-delay: calc(var(--delay, 0ms) + 150ms);
+}
+
+.reveal-block.is-visible .reveal-child {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ── Decorative elements ── */
+.glass-orb {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(176, 211, 255, 0.1);
+  box-shadow: 0 10px 28px rgba(122, 182, 255, 0.06);
+}
+
+/* ── Cursor glow layer ── */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.cursor-glow.is-active {
+  opacity: 1;
+}
+
+.cursor-glow::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(90, 227, 207, 0.1) 0%,
+    rgba(122, 182, 255, 0.05) 24%,
+    rgba(90, 180, 255, 0.02) 42%,
+    transparent 70%
+  );
+  transform: translate(
+    calc(var(--cursor-x) - 260px),
+    calc(var(--cursor-y) - 260px)
+  );
+  will-change: transform;
+}
+
+/* ── Keyframes ── */
+@keyframes floatY {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.02); opacity: 1; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes softGlow {
+  0%, 100% { filter: blur(80px) brightness(1); }
+  50% { filter: blur(90px) brightness(1.15); }
+}
+
+/* ── Focus visible ── */
+:focus-visible {
+  outline: 2px solid rgba(90, 227, 207, 0.5);
+  outline-offset: 3px;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal-block,
+  .reveal-block .reveal-child {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  body::before { display: none; }
+
+  .cursor-glow { display: none; }
+}

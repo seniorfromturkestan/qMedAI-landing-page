@@ -2,29 +2,34 @@
   --font-body: "Montserrat", sans-serif;
   --font-display: "Montserrat", sans-serif;
 
-  --color-bg-top: #060e1a;
-  --color-bg-bottom: #020509;
-  --color-surface: #0b1525;
-  --color-surface-strong: #0e1a2e;
+  --color-bg-top: #041428;
+  --color-bg-bottom: #020711;
+  --color-surface: #0a1b34;
+  --color-surface-strong: #0e2343;
   --color-text: #eef4ff;
   --color-text-soft: rgba(238, 244, 255, 0.82);
   --color-text-muted: rgba(219, 229, 245, 0.58);
-  --color-brand-strong: #5ae3cf;
-  --color-brand-accent: #7ab6ff;
-  --color-brand-calm: rgba(90, 227, 207, 0.12);
+  --color-brand-strong: #1472ff;
+  --color-brand-accent: #05e8f0;
+  --color-brand-calm: rgba(20, 114, 255, 0.14);
+  --color-brand-strong-rgb: 20, 114, 255;
+  --color-brand-accent-rgb: 5, 232, 240;
+  --color-brand-mix-rgb: 14, 180, 245;
+  --color-brand-line-rgb: 136, 205, 255;
+  --color-surface-rgb: 10, 27, 52;
 
-  --glass-bg: rgba(12, 20, 35, 0.52);
-  --glass-bg-strong: rgba(10, 18, 32, 0.78);
-  --glass-border: rgba(176, 211, 255, 0.12);
-  --glass-border-subtle: rgba(176, 211, 255, 0.06);
-  --glass-border-hover: rgba(176, 211, 255, 0.22);
+  --glass-bg: rgba(8, 22, 44, 0.56);
+  --glass-bg-strong: rgba(8, 22, 44, 0.82);
+  --glass-border: rgba(136, 205, 255, 0.14);
+  --glass-border-subtle: rgba(136, 205, 255, 0.08);
+  --glass-border-hover: rgba(5, 232, 240, 0.24);
 
   --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.36);
   --shadow-xl: 0 40px 100px rgba(0, 0, 0, 0.44);
-  --shadow-glow-brand: 0 8px 40px rgba(90, 227, 207, 0.12);
-  --shadow-glow-accent: 0 8px 40px rgba(122, 182, 255, 0.10);
+  --shadow-glow-brand: 0 8px 40px rgba(20, 114, 255, 0.14);
+  --shadow-glow-accent: 0 8px 40px rgba(5, 232, 240, 0.12);
 
   --radius-sm: 12px;
   --radius-md: 18px;
@@ -71,7 +76,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(136, 205, 255, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, black 20%, transparent 80%);
   pointer-events: none;
@@ -106,7 +111,7 @@ button {
 }
 
 ::selection {
-  background: rgba(90, 227, 207, 0.2);
+  background: rgba(5, 232, 240, 0.22);
 }
 
 /* ── Reveal animations ── */
@@ -146,10 +151,10 @@ button {
   background: radial-gradient(
     circle at 30% 30%,
     rgba(255, 255, 255, 0.18),
-    rgba(255, 255, 255, 0.02)
+    rgba(20, 114, 255, 0.03)
   );
-  border: 1px solid rgba(176, 211, 255, 0.1);
-  box-shadow: 0 10px 28px rgba(122, 182, 255, 0.06);
+  border: 1px solid rgba(136, 205, 255, 0.12);
+  box-shadow: 0 10px 28px rgba(20, 114, 255, 0.1);
 }
 
 /* ── Cursor glow layer ── */
@@ -177,9 +182,9 @@ button {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(90, 227, 207, 0.1) 0%,
-    rgba(122, 182, 255, 0.05) 24%,
-    rgba(90, 180, 255, 0.02) 42%,
+    rgba(5, 232, 240, 0.11) 0%,
+    rgba(20, 114, 255, 0.08) 24%,
+    rgba(14, 180, 245, 0.03) 42%,
     transparent 70%
   );
   transform: translate(
@@ -222,7 +227,7 @@ button {
 
 /* ── Focus visible ── */
 :focus-visible {
-  outline: 2px solid rgba(90, 227, 207, 0.5);
+  outline: 2px solid rgba(5, 232, 240, 0.5);
   outline-offset: 3px;
 }
 

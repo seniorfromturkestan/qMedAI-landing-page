@@ -187,7 +187,7 @@ onBeforeUnmount(() => {
   height: 60vw;
   max-width: 800px;
   max-height: 800px;
-  background: radial-gradient(ellipse, rgba(90, 227, 207, 0.10) 0%, rgba(90, 227, 207, 0.03) 35%, transparent 60%);
+  background: radial-gradient(ellipse, rgba(5, 232, 240, 0.12) 0%, rgba(5, 232, 240, 0.035) 35%, transparent 60%);
   pointer-events: none;
   z-index: 0;
   animation: heroGlowPulse 10s ease-in-out infinite;
@@ -201,7 +201,7 @@ onBeforeUnmount(() => {
   height: 40vw;
   max-width: 550px;
   max-height: 550px;
-  background: radial-gradient(ellipse, rgba(122, 182, 255, 0.09) 0%, rgba(122, 182, 255, 0.02) 35%, transparent 60%);
+  background: radial-gradient(ellipse, rgba(20, 114, 255, 0.1) 0%, rgba(20, 114, 255, 0.03) 35%, transparent 60%);
   pointer-events: none;
   z-index: 0;
   animation: heroGlowPulse 14s ease-in-out infinite 2s;
@@ -271,7 +271,7 @@ onBeforeUnmount(() => {
   margin-left: 0.08em;
   vertical-align: -0.08em;
   border-radius: 999px;
-  background: rgba(176, 211, 255, 0.92);
+  background: rgba(136, 205, 255, 0.92);
   animation: caretBlink 900ms steps(1) infinite;
 }
 
@@ -338,14 +338,14 @@ onBeforeUnmount(() => {
   inset: 0 0.5rem 2rem 0.5rem;
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 22% 24%, rgba(90, 227, 207, 0.10), transparent 28%),
-    radial-gradient(circle at 78% 20%, rgba(122, 182, 255, 0.10), transparent 28%),
-    radial-gradient(circle at 50% 80%, rgba(140, 120, 255, 0.04), transparent 35%),
+    radial-gradient(circle at 22% 24%, rgba(5, 232, 240, 0.11), transparent 28%),
+    radial-gradient(circle at 78% 20%, rgba(20, 114, 255, 0.11), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(14, 180, 245, 0.05), transparent 35%),
     linear-gradient(180deg, rgba(10, 18, 32, 0.5), rgba(10, 18, 32, 0.1));
   pointer-events: none;
   border: 1px solid var(--glass-border-subtle);
   overflow: hidden;
-  box-shadow: 0 0 80px rgba(90, 227, 207, 0.03), 0 0 160px rgba(122, 182, 255, 0.02);
+  box-shadow: 0 0 80px rgba(5, 232, 240, 0.05), 0 0 160px rgba(20, 114, 255, 0.04);
 }
 
 .hero-illustration::before {
@@ -362,8 +362,8 @@ onBeforeUnmount(() => {
   inset: 1.5rem;
   border-radius: var(--radius-lg);
   background-image:
-    linear-gradient(rgba(122, 182, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(90, 227, 207, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(20, 114, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 232, 240, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(circle at center, black 25%, transparent 75%);
   opacity: 0.5;
@@ -383,7 +383,7 @@ onBeforeUnmount(() => {
   top: 50%;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(90, 227, 207, 0.15), rgba(122, 182, 255, 0.6));
+  background: linear-gradient(90deg, rgba(5, 232, 240, 0.18), rgba(20, 114, 255, 0.62));
   animation: pulseGlow 5s ease-in-out infinite;
 }
 
@@ -411,7 +411,7 @@ onBeforeUnmount(() => {
 .pulse-ring {
   position: absolute;
   border-radius: 999px;
-  border: 1px solid rgba(176, 211, 255, 0.05);
+  border: 1px solid rgba(136, 205, 255, 0.08);
 }
 
 .pulse-ring-a {

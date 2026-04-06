@@ -87,8 +87,8 @@ watchEffect(() => {
   inset: 0;
   background:
     radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05), transparent 35%),
-    radial-gradient(ellipse at 20% 50%, rgba(90, 227, 207, 0.015), transparent 50%),
-    radial-gradient(ellipse at 80% 50%, rgba(122, 182, 255, 0.015), transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(5, 232, 240, 0.03), transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(20, 114, 255, 0.03), transparent 50%),
     radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.38) 100%);
   pointer-events: none;
   z-index: 0;

@@ -31,9 +31,9 @@ defineProps({
 }
 
 .base-badge.tint {
-  color: rgba(169, 242, 232, 0.92);
-  background: rgba(90, 227, 207, 0.1);
-  border-color: rgba(90, 227, 207, 0.2);
-  box-shadow: 0 0 12px rgba(90, 227, 207, 0.06);
+  color: rgba(185, 248, 255, 0.94);
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.16), rgba(5, 232, 240, 0.12));
+  border-color: rgba(5, 232, 240, 0.22);
+  box-shadow: 0 0 12px rgba(20, 114, 255, 0.1);
 }
 </style>

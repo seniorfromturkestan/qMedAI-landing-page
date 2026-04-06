@@ -63,8 +63,8 @@ defineProps({
 }
 
 .workflow-card:hover .step-index {
-  background: linear-gradient(135deg, rgba(90, 227, 207, 0.2), rgba(122, 182, 255, 0.2));
-  border-color: rgba(90, 227, 207, 0.2);
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.2), rgba(5, 232, 240, 0.2));
+  border-color: rgba(5, 232, 240, 0.22);
 }
 
 .workflow-inner {
@@ -80,7 +80,7 @@ defineProps({
 .step-connector {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(176, 211, 255, 0.15), transparent);
+  background: linear-gradient(90deg, rgba(136, 205, 255, 0.15), transparent);
 }
 
 .step-line {
@@ -103,9 +103,9 @@ defineProps({
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(90, 227, 207, 0.1), rgba(122, 182, 255, 0.1));
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.12), rgba(5, 232, 240, 0.12));
   color: var(--color-text);
-  border: 1px solid rgba(176, 211, 255, 0.08);
+  border: 1px solid rgba(136, 205, 255, 0.1);
   font-weight: 800;
   font-size: 0.95rem;
   flex-shrink: 0;

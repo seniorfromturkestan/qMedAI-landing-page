@@ -114,13 +114,13 @@ li {
 }
 
 .solution-dot {
-  background: linear-gradient(135deg, var(--color-brand-strong), #7dff96);
-  box-shadow: 0 0 14px rgba(90, 227, 207, 0.28);
+  background: linear-gradient(135deg, var(--color-brand-strong), var(--color-brand-accent));
+  box-shadow: 0 0 14px rgba(20, 114, 255, 0.22);
 }
 
 .split-card:hover .solution-dot,
 .split-card:hover .pain-dot {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .accent-card li {

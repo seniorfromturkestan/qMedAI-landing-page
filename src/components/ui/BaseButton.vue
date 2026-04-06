@@ -71,20 +71,20 @@ const sizeClass = computed(() => `size-${props.size}`);
 .base-button.primary {
   color: #04111d;
   background: linear-gradient(135deg, var(--color-brand-strong), var(--color-brand-accent));
-  box-shadow: 0 2px 16px rgba(90, 227, 207, 0.22), 0 0 0 0 rgba(90, 227, 207, 0);
+  box-shadow: 0 2px 16px rgba(20, 114, 255, 0.22), 0 0 0 0 rgba(20, 114, 255, 0);
 }
 
 .base-button.primary:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 8px 32px rgba(90, 227, 207, 0.32),
-    0 0 0 1px rgba(90, 227, 207, 0.18),
-    0 0 60px rgba(90, 227, 207, 0.08);
+    0 8px 32px rgba(20, 114, 255, 0.28),
+    0 0 0 1px rgba(5, 232, 240, 0.2),
+    0 0 60px rgba(5, 232, 240, 0.1);
 }
 
 .base-button.primary:active {
   transform: translateY(0) scale(0.98);
-  box-shadow: 0 2px 8px rgba(90, 227, 207, 0.15);
+  box-shadow: 0 2px 8px rgba(20, 114, 255, 0.16);
 }
 
 /* Shimmer on primary */
@@ -129,7 +129,7 @@ const sizeClass = computed(() => `size-${props.size}`);
 .base-button.ghost:hover {
   transform: translateY(-3px);
   color: var(--color-text);
-  background: rgba(122, 182, 255, 0.06);
+  background: rgba(20, 114, 255, 0.08);
   border-color: var(--glass-border-hover);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -140,7 +140,7 @@ const sizeClass = computed(() => `size-${props.size}`);
 
 /* ── Focus ── */
 .base-button:focus-visible {
-  outline: 2px solid rgba(90, 227, 207, 0.5);
+  outline: 2px solid rgba(5, 232, 240, 0.5);
   outline-offset: 3px;
 }
 

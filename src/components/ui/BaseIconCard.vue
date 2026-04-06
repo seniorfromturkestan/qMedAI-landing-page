@@ -43,8 +43,8 @@ defineProps({
 }
 
 .icon-card:hover {
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(90, 227, 207, 0.04);
-  border-color: rgba(176, 211, 255, 0.22);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(20, 114, 255, 0.08);
+  border-color: rgba(136, 205, 255, 0.24);
 }
 
 .icon-card.compact {
@@ -59,14 +59,14 @@ defineProps({
   height: 3rem;
   margin-bottom: 1rem;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(90, 227, 207, 0.1), rgba(122, 182, 255, 0.1));
-  border: 1px solid rgba(176, 211, 255, 0.06);
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.12), rgba(5, 232, 240, 0.12));
+  border: 1px solid rgba(136, 205, 255, 0.08);
   overflow: hidden;
   transition: background 280ms ease, transform 280ms ease;
 }
 
 .icon-card:hover .icon-mark {
-  background: linear-gradient(135deg, rgba(90, 227, 207, 0.18), rgba(122, 182, 255, 0.18));
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.2), rgba(5, 232, 240, 0.2));
   transform: rotate(-4deg) scale(1.06);
 }
 
@@ -93,7 +93,7 @@ defineProps({
 
 .icon-mark.pulse span::after {
   inset: 0.15rem;
-  border: 2px solid rgba(122, 182, 255, 0.35);
+  border: 2px solid rgba(20, 114, 255, 0.38);
   border-radius: 999px;
 }
 
@@ -113,7 +113,7 @@ defineProps({
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.2rem;
-  border: 2px solid rgba(90, 227, 207, 0.9);
+  border: 2px solid rgba(5, 232, 240, 0.9);
 }
 
 .icon-mark.dashboard span::before {
@@ -144,7 +144,7 @@ defineProps({
   width: 0.6rem;
   height: 0.24rem;
   border-radius: 999px;
-  background: rgba(90, 227, 207, 0.9);
+  background: rgba(5, 232, 240, 0.9);
   box-shadow: 0 0.42rem 0 -0.08rem currentColor, 0 0.72rem 0 -0.08rem currentColor;
 }
 

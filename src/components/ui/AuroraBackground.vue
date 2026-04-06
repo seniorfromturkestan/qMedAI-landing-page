@@ -42,7 +42,7 @@
   height: 55vw;
   max-width: 700px;
   max-height: 700px;
-  background: radial-gradient(circle, rgba(90, 227, 207, 0.16) 0%, rgba(90, 227, 207, 0.04) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(5, 232, 240, 0.16) 0%, rgba(5, 232, 240, 0.04) 45%, transparent 70%);
   animation-name: auroraFade, auroraDrift1;
   animation-duration: 1.2s, 22s;
   animation-timing-function: ease-out, ease-in-out;
@@ -58,7 +58,7 @@
   height: 50vw;
   max-width: 650px;
   max-height: 650px;
-  background: radial-gradient(circle, rgba(122, 182, 255, 0.14) 0%, rgba(122, 182, 255, 0.03) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(20, 114, 255, 0.16) 0%, rgba(20, 114, 255, 0.04) 45%, transparent 70%);
   animation-name: auroraFade, auroraDrift2;
   animation-duration: 1.2s, 28s;
   animation-timing-function: ease-out, ease-in-out;
@@ -74,7 +74,7 @@
   height: 45vw;
   max-width: 580px;
   max-height: 580px;
-  background: radial-gradient(circle, rgba(90, 180, 255, 0.10) 0%, rgba(90, 227, 207, 0.06) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(14, 180, 245, 0.12) 0%, rgba(5, 232, 240, 0.06) 40%, transparent 70%);
   animation-name: auroraFade, auroraDrift3;
   animation-duration: 1.2s, 25s;
   animation-timing-function: ease-out, ease-in-out;
@@ -90,7 +90,7 @@
   height: 40vw;
   max-width: 520px;
   max-height: 520px;
-  background: radial-gradient(circle, rgba(140, 120, 255, 0.07) 0%, rgba(90, 180, 255, 0.03) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(20, 114, 255, 0.08) 0%, rgba(5, 232, 240, 0.03) 40%, transparent 70%);
   animation-name: auroraFade, auroraDrift4;
   animation-duration: 1.2s, 30s;
   animation-timing-function: ease-out, ease-in-out;
@@ -113,16 +113,16 @@
 
 .aurora-stream-1 {
   background:
-    linear-gradient(110deg, transparent 0%, rgba(90, 227, 207, 0.10) 32%, transparent 58%),
-    linear-gradient(160deg, transparent 12%, rgba(122, 182, 255, 0.07) 44%, transparent 72%);
+    linear-gradient(110deg, transparent 0%, rgba(5, 232, 240, 0.11) 32%, transparent 58%),
+    linear-gradient(160deg, transparent 12%, rgba(20, 114, 255, 0.08) 44%, transparent 72%);
   transform: translate3d(-6%, 0, 0) rotate(-8deg) scale(1.08);
   animation: streamDrift1 36s linear infinite;
 }
 
 .aurora-stream-2 {
   background:
-    linear-gradient(100deg, transparent 0%, rgba(122, 182, 255, 0.07) 30%, transparent 58%),
-    linear-gradient(145deg, transparent 18%, rgba(90, 227, 207, 0.08) 48%, transparent 78%);
+    linear-gradient(100deg, transparent 0%, rgba(20, 114, 255, 0.08) 30%, transparent 58%),
+    linear-gradient(145deg, transparent 18%, rgba(5, 232, 240, 0.09) 48%, transparent 78%);
   transform: translate3d(8%, -2%, 0) rotate(7deg) scale(1.04);
   animation: streamDrift2 42s linear infinite;
 }
@@ -131,11 +131,11 @@
   inset: 0;
   opacity: 0.32;
   background-image:
-    radial-gradient(circle at 12% 24%, rgba(176, 211, 255, 0.26) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 74% 32%, rgba(90, 227, 207, 0.22) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 36% 72%, rgba(122, 182, 255, 0.18) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 82% 78%, rgba(90, 227, 207, 0.16) 0 1px, transparent 1.8px),
-    radial-gradient(circle at 55% 48%, rgba(140, 120, 255, 0.12) 0 1px, transparent 1.8px);
+    radial-gradient(circle at 12% 24%, rgba(136, 205, 255, 0.26) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 74% 32%, rgba(5, 232, 240, 0.24) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 36% 72%, rgba(20, 114, 255, 0.2) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 82% 78%, rgba(5, 232, 240, 0.18) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 55% 48%, rgba(20, 114, 255, 0.14) 0 1px, transparent 1.8px);
   background-size: 320px 320px, 380px 380px, 420px 420px, 520px 520px, 460px 460px;
   animation: particlesFloat 44s linear infinite;
 }

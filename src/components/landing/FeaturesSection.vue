@@ -56,7 +56,7 @@ defineProps({
   justify-content: flex-start;
   margin-top: 1.2rem;
   padding-top: 0.9rem;
-  border-top: 1px solid rgba(176, 211, 255, 0.06);
+  border-top: 1px solid rgba(136, 205, 255, 0.08);
   color: var(--color-text-muted);
   font-size: 0.72rem;
   font-weight: 700;

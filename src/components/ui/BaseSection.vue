@@ -77,7 +77,7 @@ const { target, isVisible } = useReveal({ immediate: props.immediate });
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(176, 211, 255, 0.06) 30%, rgba(176, 211, 255, 0.08) 50%, rgba(176, 211, 255, 0.06) 70%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(136, 205, 255, 0.08) 30%, rgba(5, 232, 240, 0.12) 50%, rgba(136, 205, 255, 0.08) 70%, transparent 100%);
   pointer-events: none;
 }
 
@@ -104,7 +104,7 @@ const { target, isVisible } = useReveal({ immediate: props.immediate });
   letter-spacing: -0.035em;
   font-weight: 800;
   max-width: none;
-  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text) 60%, rgba(176, 211, 255, 0.85) 100%);
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text) 58%, rgba(20, 114, 255, 0.88) 82%, rgba(5, 232, 240, 0.95) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

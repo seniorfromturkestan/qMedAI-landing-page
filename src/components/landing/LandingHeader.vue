@@ -130,7 +130,7 @@ const closeMenu = () => { isOpen.value = false; };
   left: 10%;
   right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(90, 227, 207, 0.25), rgba(176, 211, 255, 0.4), rgba(122, 182, 255, 0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(5, 232, 240, 0.25), rgba(136, 205, 255, 0.4), rgba(20, 114, 255, 0.25), transparent);
 }
 
 /* Brand */
@@ -152,7 +152,7 @@ const closeMenu = () => { isOpen.value = false; };
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 800;
-  box-shadow: 0 2px 8px rgba(90, 227, 207, 0.2);
+  box-shadow: 0 2px 10px rgba(20, 114, 255, 0.2);
 }
 
 .brand-mark svg {
@@ -184,7 +184,7 @@ const closeMenu = () => { isOpen.value = false; };
 
 .nav-links a:hover {
   color: var(--color-text);
-  background: rgba(122, 182, 255, 0.07);
+  background: rgba(20, 114, 255, 0.09);
 }
 
 /* Desktop controls */
@@ -220,14 +220,14 @@ const closeMenu = () => { isOpen.value = false; };
 }
 
 .locale-pill.active {
-  background: rgba(90, 227, 207, 0.12);
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.14), rgba(5, 232, 240, 0.12));
   color: var(--color-brand-strong);
 }
 
 .locale-pill:hover { color: var(--color-text); }
 
 .locale-pill:focus-visible {
-  outline: 2px solid rgba(90, 227, 207, 0.4);
+  outline: 2px solid rgba(5, 232, 240, 0.4);
   outline-offset: 2px;
 }
 
@@ -242,7 +242,7 @@ const closeMenu = () => { isOpen.value = false; };
   padding: 0;
   border: 0;
   border-radius: 0.65rem;
-  background: rgba(122, 182, 255, 0.06);
+  background: rgba(20, 114, 255, 0.08);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -251,7 +251,7 @@ const closeMenu = () => { isOpen.value = false; };
 }
 
 .menu-toggle:hover {
-  background: rgba(122, 182, 255, 0.1);
+  background: rgba(5, 232, 240, 0.12);
   box-shadow: 0 10px 24px rgba(8, 18, 36, 0.22);
 }
 
@@ -291,7 +291,7 @@ const closeMenu = () => { isOpen.value = false; };
 }
 
 .mobile-menu a:hover {
-  background: rgba(122, 182, 255, 0.06);
+  background: rgba(20, 114, 255, 0.08);
 }
 
 /* Transitions */

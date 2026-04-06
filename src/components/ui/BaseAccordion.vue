@@ -57,18 +57,18 @@ const toggleItem = (index) => {
 }
 
 .accordion-item:hover {
-  border-color: rgba(176, 211, 255, 0.24);
+  border-color: rgba(136, 205, 255, 0.24);
   box-shadow: 0 4px 16px rgba(1, 6, 15, 0.15);
 }
 
 .accordion-item.is-open {
-  border-color: rgba(90, 227, 207, 0.2);
+  border-color: rgba(5, 232, 240, 0.22);
   box-shadow: 0 14px 36px rgba(2, 12, 28, 0.22);
 }
 
 .accordion-item.is-open .accordion-trigger {
   color: var(--color-brand-strong);
-  background: rgba(122, 182, 255, 0.035);
+  background: rgba(20, 114, 255, 0.05);
 }
 
 .accordion-trigger {
@@ -90,7 +90,7 @@ const toggleItem = (index) => {
 
 .accordion-trigger:hover {
   color: var(--color-brand-strong);
-  background: rgba(122, 182, 255, 0.035);
+  background: rgba(20, 114, 255, 0.05);
 }
 
 .accordion-content {
@@ -131,7 +131,7 @@ const toggleItem = (index) => {
   width: 2rem;
   height: 2rem;
   border-radius: 999px;
-  background: rgba(122, 182, 255, 0.08);
+  background: rgba(20, 114, 255, 0.1);
   border: 1px solid var(--glass-border-subtle);
   font-size: 1.1rem;
   font-weight: 600;
@@ -142,7 +142,7 @@ const toggleItem = (index) => {
 
 .accordion-item.is-open .plus {
   transform: rotate(45deg);
-  background: rgba(90, 227, 207, 0.12);
+  background: rgba(5, 232, 240, 0.14);
   color: var(--color-brand-strong);
 }
 

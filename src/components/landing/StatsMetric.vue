@@ -45,9 +45,9 @@ const formattedValue = computed(() => {
 }
 
 .stat-item:hover {
-  border-color: rgba(176, 211, 255, 0.18);
+  border-color: rgba(136, 205, 255, 0.18);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(1, 6, 15, 0.22), 0 0 20px rgba(90, 227, 207, 0.04);
+  box-shadow: 0 12px 32px rgba(1, 6, 15, 0.22), 0 0 20px rgba(20, 114, 255, 0.08);
 }
 
 .stat-item strong {

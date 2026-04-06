@@ -61,7 +61,7 @@ defineProps({
   inset: -1px;
   border-radius: inherit;
   background:
-    linear-gradient(135deg, rgba(90, 227, 207, 0.14), transparent 35%, rgba(122, 182, 255, 0.14));
+    linear-gradient(135deg, rgba(20, 114, 255, 0.16), transparent 35%, rgba(5, 232, 240, 0.16));
   opacity: 0;
   transition: opacity 260ms ease;
   pointer-events: none;

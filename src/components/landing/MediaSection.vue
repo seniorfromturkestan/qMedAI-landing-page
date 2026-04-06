@@ -99,7 +99,7 @@ const scrollRail = (direction) => {
   width: 2.7rem;
   height: 2.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(176, 211, 255, 0.14);
+  border: 1px solid rgba(136, 205, 255, 0.16);
   background: rgba(8, 18, 34, 0.55);
   color: var(--color-text);
   transition: transform 220ms var(--ease-spring), border-color 220ms ease, background 220ms ease;
@@ -107,7 +107,7 @@ const scrollRail = (direction) => {
 
 .media-nav:hover {
   transform: translateY(-2px);
-  border-color: rgba(90, 227, 207, 0.24);
+  border-color: rgba(5, 232, 240, 0.26);
   background: rgba(10, 28, 40, 0.78);
 }
 
@@ -141,7 +141,7 @@ const scrollRail = (direction) => {
   min-height: 28rem;
   border-radius: 1.9rem;
   overflow: hidden;
-  border: 1px solid rgba(176, 211, 255, 0.1);
+  border: 1px solid rgba(136, 205, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
   scroll-snap-align: start;
@@ -150,7 +150,7 @@ const scrollRail = (direction) => {
 
 .media-card:hover {
   transform: translateY(-8px) scale(1.025);
-  border-color: rgba(90, 227, 207, 0.24);
+  border-color: rgba(5, 232, 240, 0.24);
   box-shadow: 0 28px 60px rgba(1, 8, 20, 0.32);
 }
 
@@ -181,7 +181,7 @@ const scrollRail = (direction) => {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   background: rgba(6, 14, 26, 0.72);
-  border: 1px solid rgba(176, 211, 255, 0.14);
+  border: 1px solid rgba(136, 205, 255, 0.16);
   color: #eef3ff;
   font-size: 0.73rem;
   font-weight: 700;

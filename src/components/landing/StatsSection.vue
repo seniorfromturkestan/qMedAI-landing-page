@@ -51,7 +51,7 @@ const { target, isVisible } = useReveal();
   position: absolute;
   inset: auto -10% -40% 35%;
   height: 18rem;
-  background: radial-gradient(circle, rgba(90, 227, 207, 0.10) 0%, rgba(122, 182, 255, 0.04) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(5, 232, 240, 0.11) 0%, rgba(20, 114, 255, 0.05) 40%, transparent 70%);
   filter: blur(28px);
   pointer-events: none;
   animation: pulseGlow 8s ease-in-out infinite;

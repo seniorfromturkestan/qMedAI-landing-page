@@ -120,7 +120,7 @@ const scrollRail = (direction) => {
 .media-rail {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(17rem, 20.5rem);
+  grid-auto-columns: minmax(19rem, 20.5rem);
   gap: 1rem;
   overflow-x: auto;
   overflow-y: visible;

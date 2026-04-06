@@ -49,7 +49,7 @@ defineProps({
 }
 
 .base-card:hover {
-  transform: translateY(-8px) scale(1.1);
+  transform: translateY(-8px) scale(1.025);
   border-color: var(--glass-border-hover);
   box-shadow: var(--shadow-md), 0 0 0 1px rgba(90, 227, 207, 0.04);
 }

@@ -1,7 +1,13 @@
 <template>
   <BaseCard class="icon-card" :class="{ compact }">
-    <div class="icon-mark" :class="icon">
-      <span />
+    <div class="icon-mark">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          v-for="(path, index) in iconPaths"
+          :key="`${icon}-${index}`"
+          :d="path"
+        />
+      </svg>
     </div>
     <h3>{{ title }}</h3>
     <p v-if="text">{{ text }}</p>
@@ -10,9 +16,10 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import BaseCard from "./BaseCard.vue";
 
-defineProps({
+const props = defineProps({
   icon: {
     type: String,
     default: "pulse",
@@ -30,6 +37,44 @@ defineProps({
     default: false,
   },
 });
+
+const icons = {
+  pulse: [
+    "M3.5 12h3.2l2.2-4.2 3.1 8.4 2.5-5.1h5",
+    "M12 3.75a8.25 8.25 0 1 1 0 16.5a8.25 8.25 0 0 1 0-16.5Z",
+  ],
+  triage: [
+    "M6 17.25V12.5",
+    "M12 17.25V9",
+    "M18 17.25V6.5",
+    "M4 20.25h16",
+  ],
+  dashboard: [
+    "M4.75 5.25h6.5v5.5h-6.5z",
+    "M12.75 5.25h6.5v3.5h-6.5z",
+    "M12.75 10.75h6.5v8h-6.5z",
+    "M4.75 12.75h6.5v6h-6.5z",
+  ],
+  registry: [
+    "M7.25 4.75h9.5a2 2 0 0 1 2 2v10.5a2 2 0 0 1-2 2h-9.5a2 2 0 0 1-2-2V6.75a2 2 0 0 1 2-2Z",
+    "M9 3.75h6",
+    "M8.5 9h7",
+    "M8.5 12h7",
+    "M8.5 15h4.5",
+  ],
+  message: [
+    "M5.25 6.25h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-8.5l-4.5 3v-3h-.5a1.5 1.5 0 0 1-1.5-1.5v-7.5a1.5 1.5 0 0 1 1.5-1.5Z",
+    "M8 10h8",
+    "M8 13h5",
+  ],
+  alert: [
+    "M12 4.5l8 14h-16l8-14Z",
+    "M12 9v4.5",
+    "M12 16.5h.01",
+  ],
+};
+
+const iconPaths = computed(() => icons[props.icon] ?? icons.pulse);
 </script>
 
 <style scoped>
@@ -43,8 +88,8 @@ defineProps({
 }
 
 .icon-card:hover {
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(90, 227, 207, 0.04);
-  border-color: rgba(176, 211, 255, 0.22);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(20, 114, 255, 0.08);
+  border-color: rgba(136, 205, 255, 0.24);
 }
 
 .icon-card.compact {
@@ -55,132 +100,32 @@ defineProps({
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 3.25rem;
+  height: 3.25rem;
   margin-bottom: 1rem;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(90, 227, 207, 0.1), rgba(122, 182, 255, 0.1));
-  border: 1px solid rgba(176, 211, 255, 0.06);
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.14), rgba(5, 232, 240, 0.12));
+  border: 1px solid rgba(136, 205, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   overflow: hidden;
-  transition: background 280ms ease, transform 280ms ease;
+  transition: background 280ms ease, transform 280ms ease, box-shadow 280ms ease;
 }
 
 .icon-card:hover .icon-mark {
-  background: linear-gradient(135deg, rgba(90, 227, 207, 0.18), rgba(122, 182, 255, 0.18));
+  background: linear-gradient(135deg, rgba(20, 114, 255, 0.22), rgba(5, 232, 240, 0.18));
   transform: rotate(-4deg) scale(1.06);
+  box-shadow: 0 10px 28px rgba(20, 114, 255, 0.18);
 }
 
-.icon-mark span {
-  position: relative;
-  display: block;
-  width: 1.45rem;
-  height: 1.45rem;
-  color: var(--color-brand-accent);
-}
-
-.icon-mark span::before,
-.icon-mark span::after {
-  content: "";
-  position: absolute;
-}
-
-.icon-mark.pulse span::before {
-  inset: 0.3rem 0.05rem 0.3rem 0.05rem;
-  background:
-    linear-gradient(135deg, transparent 0 12%, currentColor 12% 18%, transparent 18% 33%, currentColor 33% 44%, transparent 44% 58%, currentColor 58% 64%, transparent 64% 100%);
-  clip-path: polygon(0 55%, 18% 55%, 30% 32%, 44% 78%, 58% 40%, 72% 58%, 100% 58%, 100% 70%, 0 70%);
-}
-
-.icon-mark.pulse span::after {
-  inset: 0.15rem;
-  border: 2px solid rgba(122, 182, 255, 0.35);
-  border-radius: 999px;
-}
-
-.icon-mark.triage span::before {
-  left: 0.18rem;
-  bottom: 0.12rem;
-  width: 0.24rem;
-  height: 0.68rem;
-  border-radius: 999px;
-  background: currentColor;
-  box-shadow: 0.42rem -0.18rem 0 0 currentColor, 0.84rem -0.4rem 0 0 currentColor;
-}
-
-.icon-mark.triage span::after {
-  right: 0.02rem;
-  top: 0.12rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 0.2rem;
-  border: 2px solid rgba(90, 227, 207, 0.9);
-}
-
-.icon-mark.dashboard span::before {
-  inset: 0.14rem;
-  border-radius: 0.32rem;
-  border: 2px solid currentColor;
-}
-
-.icon-mark.dashboard span::after {
-  left: 0.28rem;
-  bottom: 0.25rem;
-  width: 0.16rem;
-  height: 0.34rem;
-  border-radius: 999px;
-  background: currentColor;
-  box-shadow: 0.28rem -0.08rem 0 0 currentColor, 0.56rem -0.22rem 0 0 currentColor;
-}
-
-.icon-mark.registry span::before {
-  inset: 0.18rem 0.22rem 0.14rem;
-  border-radius: 0.24rem;
-  border: 2px solid currentColor;
-}
-
-.icon-mark.registry span::after {
-  left: 0.42rem;
-  top: 0.04rem;
-  width: 0.6rem;
-  height: 0.24rem;
-  border-radius: 999px;
-  background: rgba(90, 227, 207, 0.9);
-  box-shadow: 0 0.42rem 0 -0.08rem currentColor, 0 0.72rem 0 -0.08rem currentColor;
-}
-
-.icon-mark.message span::before {
-  inset: 0.18rem 0.14rem 0.32rem;
-  border-radius: 0.35rem;
-  border: 2px solid currentColor;
-}
-
-.icon-mark.message span::after {
-  left: 0.34rem;
-  bottom: 0.12rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  border-left: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: skewX(-24deg);
-}
-
-.icon-mark.alert span::before {
-  left: 0.18rem;
-  top: 0.08rem;
-  width: 0;
-  height: 0;
-  border-left: 0.54rem solid transparent;
-  border-right: 0.54rem solid transparent;
-  border-bottom: 1rem solid #ffb347;
-}
-
-.icon-mark.alert span::after {
-  left: 0.68rem;
-  top: 0.45rem;
-  width: 0.1rem;
-  height: 0.44rem;
-  background: #08111d;
-  box-shadow: 0 0.56rem 0 0 #08111d;
+.icon-mark svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  stroke: var(--color-brand-accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  filter: drop-shadow(0 0 10px rgba(5, 232, 240, 0.18));
 }
 
 .icon-card h3 {
